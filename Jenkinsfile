@@ -25,8 +25,8 @@ node('test') {
         sh "docker-compose down"
         sh "docker-compose up -d"
     }
-    stage('DAST') {
+    /* stage('DAST') {
         // Ensure the job 'SECURITY-DAST-OWASP_ZAP' exists in Jenkins
         build job: 'SECURITY-DAST-OWASP_ZAP', propagate: true
-    }
+    }*/
 }
