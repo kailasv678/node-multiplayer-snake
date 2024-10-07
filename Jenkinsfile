@@ -13,7 +13,7 @@ node('test') {
         app = docker.build("kailasv678/test")
     }
     stage('Post-to-dockerhub') {
-        docker.withRegistry('https://registry.hub.docker.com', 'training_creds') {
+        docker.withRegistry('https://registry.hub.docker.com', 'kailasv678') {
             app.push("latest")
         }
     }
